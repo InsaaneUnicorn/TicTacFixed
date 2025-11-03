@@ -210,7 +210,7 @@ main() {
     play_game
     printf "%s" "Play again? [Y/n]: "
     IFS= read -r again; again="$(to_upper "$again")"
-    if [ ! "$again" = "Y" ] || [ ! "$again" = "y" ]; then
+    if [ "$again" = "N" ; then
       printf "%s\n" "Thanks for playing!"; break
     fi
   done
